@@ -233,7 +233,7 @@ public class PokerPhotonManager : MonoBehaviourPunCallbacks
         for (int i = 0; i < rooms.Length; i++)
         {
             RoomInfo roomInfo = roomList[i];
-            rooms[i] = new PokerRoomInfo(roomInfo.Name, roomInfo.MaxPlayers, roomInfo.PlayerCount, roomInfo.IsOpen);
+            rooms[i] = new PokerRoomInfo(roomInfo.Name, (byte)roomInfo.MaxPlayers, roomInfo.PlayerCount, roomInfo.IsOpen);
         }
 
         m_PhotonUI.RoomListUpdate(rooms);
